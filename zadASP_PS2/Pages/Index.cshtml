@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.Name</h1><br/>
+    <form method="post">
+        <div class="row">
+            <div class="col">
+                <label asp-for="Address.Street" class="control-label"></label>
+            </div>
+            <div class="col">
+                <label asp-for="Address.Number" class="control-label"></label>
+            </div>
+            <div class="col">
+                <label asp-for="Address.ZipCode" class="control-label"></label>
+            </div>
+            <div class="col">
+                <label asp-for="Address.City" class="control-label"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input asp-for="Address.Street" class="form-control"/><br />
+                </div>
+                <div class="col">
+                <input asp-for="Address.Number" class="form-control"/><br />
+            </div>
+            <div class="col">
+                <input asp-for="Address.ZipCode" class="form-control"/><br />
+            </div>
+            <div class="col">
+                <input asp-for="Address.City" class="form-control"/><br />  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span asp-validation-for="Address.Street" class="text-danger"> </span>
+            </div>
+            <div class="col">
+                <span asp-validation-for="Address.Number" class="text-danger"> </span>
+            </div>
+            <div class="col">
+                <span asp-validation-for="Address.ZipCode" class="text-danger"> </span>
+            </div>
+            <div class="col">
+                <span asp-validation-for="Address.City" class="text-danger"> </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <br/><button type="submit">Zatwierdź</button>
+            </div>
+        </div>
+    </form>
+</div>
